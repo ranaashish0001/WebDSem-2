@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 5: Employee Record System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Employee Management System</h2>
+        
+        <div class="form-section">
+            <div class="input-group">
+                <label for="empName">Employee Name:</label>
+                <input type="text" id="empName" placeholder="e.g., Krishna  " required>
+            </div>
+            <div class="input-group">
+                <label for="empId">Employee ID:</label>
+                <input type="text" id="empId" placeholder="e.g., E101" required>
+            </div>
+            <div class="input-group">
+                <label for="empSalary">Salary (₹):</label>
+                <input type="number" id="empSalary" placeholder="e.g., 60000" required>
+            </div>
+            <div class="input-group">
+                <label for="empDept">Department:</label>
+                <select id="empDept">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+            <button class="btn-primary" onclick="addEmployee()">Add Employee</button>
+        </div>
+
+        <hr>
+
+        <div class="actions-section">
+            <button onclick="displayAll()">Show All</button>
+            <button onclick="filterHighSalary()">Salary > ₹50,000</button>
+            <button onclick="calculateTotalSalary()">Total Payout</button>
+            <button onclick="calculateAvgSalary()">Average Salary</button>
+        </div>
+
+        <div class="count-section">
+            <label for="countDept">Count in Dept:</label>
+            <select id="countDept">
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Sales">Sales</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Finance">Finance</option>
+            </select>
+            <button onclick="countByDepartment()">Count</button>
+        </div>
+
+        <div id="output" class="output-section">
+            <p>No records to display yet.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
