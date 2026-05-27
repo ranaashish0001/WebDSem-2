@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 6: DOM Manipulation & Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="mainHeading">Welcome to the DOM!</h2>
+        <p id="toggleParagraph">This is a dynamic paragraph. You can hide me or change my font size using the buttons below.</p>
+        
+        <p class="preview">Live Input Preview: <span id="livePreview">None</span></p>
+
+        <div class="input-group">
+            <label for="messageInput">Enter a message:</label>
+            <input type="text" id="messageInput" placeholder="Type something and click outside...">
+        </div>
+
+        <hr>
+
+        <div class="actions-section">
+            <button id="btnHeading">Change Heading</button>
+            <button id="btnBgColor">Hover for Random Background</button>
+            <button id="btnFontSize">Increase Font Size</button>
+            <button id="btnToggle" onclick="toggleVisibility()">Hide Paragraph</button>
+        </div>
+
+        <button id="btnReset" class="btn-danger">Reset Page</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
